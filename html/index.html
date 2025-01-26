@@ -100,7 +100,7 @@
             <li><b>Age:</b> 24</li>
             <li><b>Gender:</b> Male</li>
           </ul>
-          <button id="download-cv" class="btn btn-theme-outline">Download CV</button>
+          <button class="btn btn-theme-outline" onclick="openCV()">View CV</button>
         </div>
       </div>
     </div>
@@ -407,17 +407,11 @@
   <script src="../assets/js/topbar-virtual.js"></script>
 
   <script>
-    document.getElementById('download-cv').addEventListener('click', function () {
-      const cvPath = '../assets/Kristijan_Kostovski_CV.pdf';
-
-      const anchor = document.createElement('a');
-      anchor.href = cvPath;
-      anchor.download = 'Kristijan_Kostovski_CV.pdf';
-
-      document.body.appendChild(anchor);
-      anchor.click();
-      document.body.removeChild(anchor);
-    });
+    function openCV() {
+    
+    const cvUrl = 'https://kixerrealm.github.io/virtual-folio/assets/Kristijan_Kostovski_CV.pdf'; 
+    window.open(cvUrl, '_blank');
+  }
   </script>
 
 </body>
